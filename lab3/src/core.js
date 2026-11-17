@@ -55,6 +55,9 @@ function recSumTo(n) {
  * @param {*} n
  */
 function factorial(n) {
+    if (n < 0) {
+        return undefined;
+    }
     let result = 1;
 
     for (let i = 2; i <= n; i++) {
@@ -80,6 +83,9 @@ function isBinary(n) {
  * @param {*} n
  */
 function fibonacci(n) {
+    if (n < 0) {
+        return undefined;
+    }
     let previous = 0;
     let current = 1;
 
