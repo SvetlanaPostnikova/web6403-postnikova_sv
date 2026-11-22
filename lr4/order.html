@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказать — beads for you</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/order.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav aria-label="Основная навигация">
+            <ul class="menu">
+                <li><a href="index.html" class="menu__link">Главная</a></li>
+                <li><a href="premium.html" class="menu__link">Premium</a></li>
+                <li><a href="order.html" class="menu__link menu__link_current" aria-current="page">Заказать</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page order-layout">
+        <h1 class="order-layout__wide">Заказать украшение</h1>
+
+        <section class="card">
+            <h2>Примеры работ</h2>
+            <p>Я создаю украшения из бисера и бусин на заказ. Вы можете выбрать готовый дизайн
+               или описать свою идею.</p>
+            <div class="gallery">
+                <img class="gallery__image" src="img/work1.jpg" alt="Сумочка из бусин с красной вставкой">
+                <img class="gallery__image" src="img/work2.jpg" alt="Маленькая красная сумочка из бисера">
+                <img class="gallery__image" src="img/work3.jpg" alt="Браслет из бисера с сердечками">
+                <img class="gallery__image" src="img/work4.jpg" alt="Кольцо из бисера с ромашкой">
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Заявка на заказ</h2>
+            <form class="order-form" id="order-form" action="orders" method="post">
+                <label class="order-form__field" for="customer-name">
+                    Имя
+                    <input class="order-form__input" id="customer-name" name="name"
+                           type="text" autocomplete="name" maxlength="80" required>
+                </label>
+
+                <label class="order-form__field" for="customer-email">
+                    Электронная почта
+                    <input class="order-form__input" id="customer-email" name="email"
+                           type="email" autocomplete="email" maxlength="254" required>
+                </label>
+
+                <label class="order-form__field" for="order-description">
+                    Какое украшение вы хотите?
+                    <textarea class="order-form__input" id="order-description" name="description"
+                              rows="4" maxlength="600" required></textarea>
+                </label>
+
+                <label class="order-form__consent">
+                    <input name="consent" type="checkbox" value="yes" required>
+                    Согласен(на) на обработку данных
+                </label>
+
+                <button class="order-form__button" type="submit">Отправить заявку</button>
+                <p class="order-form__status" id="order-status" role="status"></p>
+            </form>
+        </section>
+
+        <section class="card links-table order-layout__wide">
+            <h2>Полезные ссылки</h2>
+            <div class="links-table__scroll">
+                <table class="links-table__table">
+                    <caption>Всё, что нужно перед заказом</caption>
+                    <tr>
+                        <th>Раздел</th>
+                        <th>Зачем нужен</th>
+                        <th>Ссылка</th>
+                    </tr>
+                    <tr>
+                        <td>Оформление заказа</td>
+                        <td>Как сделать заказ</td>
+                        <td><a href="https://t.me/beadsforyou_tg/370" target="_blank" rel="noopener">Открыть</a></td>
+                    </tr>
+                    <tr>
+                        <td>Отзывы</td>
+                        <td>Что говорят покупатели</td>
+                        <td><a href="https://t.me/beadsforyou_reviews/3" target="_blank" rel="noopener">Открыть</a></td>
+                    </tr>
+                    <tr>
+                        <td>Подарочные карты</td>
+                        <td>Подарить украшение</td>
+                        <td><a href="https://t.me/beadsforyou_tg/922" target="_blank" rel="noopener">Открыть</a></td>
+                    </tr>
+                    <tr>
+                        <td>Поиск изделий</td>
+                        <td>Помощь с выбором украшения</td>
+                        <td><a href="https://t.me/beadsforyou_tg/480" target="_blank" rel="noopener">Открыть</a></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>beads for you ♡ · Вероника · Самара</p>
+    </footer>
+</body>
+</html>
